@@ -1,158 +1,138 @@
 {{define "header"}}
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-    <title>{{.Title}}</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>{{.Title}}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
 
-<!-- Bootstrap -->
-<link rel="stylesheet" media="screen" href="http://{{.HostName}}/assets/css/bootstrap.min.css">
-<link rel="stylesheet" media="screen" href="http://{{.HostName}}/assets/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="http://{{.HostName}}/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://{{.HostName}}/assets/css/icomoon-social.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800' rel='stylesheet' type='text/css'>
 
-<!-- Bootstrap Admin Theme -->
-<link rel="stylesheet" media="screen" href="http://{{.HostName}}/assets/css/bootstrap-admin-theme.css">
-<link rel="stylesheet" media="screen" href="http://{{.HostName}}/assets/css/bootstrap-admin-theme-change-size.css">
+	<link rel="stylesheet" href="http://{{.HostName}}/assets/css/leaflet.css" />
+		<!--[if lte IE 8]>
+		<link rel="stylesheet" href="http://{{.HostName}}/assets/css/leaflet.ie.css" />
+		<![endif]-->
+		<link rel="stylesheet" href="http://{{.HostName}}/assets/css/main.css">
 
-<!-- Vendors -->
-<link rel="stylesheet" media="screen" href="http://{{.HostName}}/assets/vendors/easypiechart/jquery.easy-pie-chart.css">
-<link rel="stylesheet" media="screen" href="http://{{.HostName}}/assets/vendors/easypiechart/jquery.easy-pie-chart_custom.css">
-<link rel="stylesheet" href="http://{{.HostName}}/assets/css/jquery-ui.min.css" id="style_color-header-1">  
-<link rel="stylesheet" href="http://{{.HostName}}/assets/css/jquery.dataTables.css" id="style_color-header-1">  
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-   <script type="text/javascript" src="http://{{.HostName}}/assets/js/html5shiv.js"></script>
-   <script type="text/javascript" src="http://{{.HostName}}/assets/js/respond.min.js"></script>
-<![endif]-->
+		<script src="http://{{.HostName}}/assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
-    <body class="bootstrap-admin-with-small-navbar">
-<!-- small navbar -->
-<nav class="navbar navbar-default navbar-fixed-top bootstrap-admin-navbar-sm" role="navigation">
-    <div class="container">
-<div class="collapse navbar-collapse">
-    <ul class="nav navbar-nav navbar-left bootstrap-admin-theme-change-size">
-<li class="text">Change size:</li>
-<li><a class="size-changer small">Small</a></li>
-<li><a class="size-changer large active">Large</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-    <li><a href="http://{{.HostName}}/reports/financial">Reports</a></li>
-    <!-- <li><a href="#">Link</a></li> -->
-<li>
-    <a href="#">Reminders <i class="glyphicon glyphicon-bell"></i></a>
-</li>
-<li>
-    <a href="#">Settings <i class="glyphicon glyphicon-cog"></i></a>
-</li>
-<li>
-<a href="http://naturalcandlesupply.com.au">Go to frontend <i class="glyphicon glyphicon-share-alt"></i></a>
-</li>
-<!--
-<li class="dropdown">
-    <a href="#" role="button" class="dropdown-toggle" data-hover="dropdown"> <i class="glyphicon glyphicon-user"></i> Username <i class="caret"></i></a>
-    <ul class="dropdown-menu">
-<li><a href="#">Action</a></li>
-<li><a href="#">Another action</a></li>
-<li><a href="#">Something else here</a></li>
-<li role="presentation" class="divider"></li>
-<li><a href="index.html">Logout</a></li>
-    </ul>
-    </li>
--->
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
 
-<li>
-<a href="http://{{.HostName}}/logout">Log Out<i class="glyphicon glyphicon-share-alt"></i></a>
-</li>
-    </ul>
-</div>
-    </div>
-</nav>
-
-<!-- main / large navbar -->
-<nav class="navbar navbar-default navbar-fixed-top bootstrap-admin-navbar bootstrap-admin-navbar-under-small" role="navigation">
-    <div class="container">
-<div class="row">
-    <div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-navbar-collapse">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-</button>
-<a class="navbar-brand{{if eq .MenuActive "index"}} active{{end}}" href="http://{{.HostName}}">Admin Panel</a>
-    </div>
-    <div class="collapse navbar-collapse main-navbar-collapse">
-	    <ul class="nav navbar-nav">
-
-<li {{if eq .MenuActive "warehouse"}}class="active"{{end}}class="dropdown">
-<a href="#" class="dropdown-toggle" data-hover="dropdown">Warehouse Reports<b class="caret"></b></a>
-<ul class="dropdown-menu">
-    <li role="presentation" class="dropdown-header">Warehouse Reports</li>
-    <li><a href="http://{{.HostName}}/reports/warehouse/lateDelivery">Late Delivery Report</a></li>
-</ul>
-</li>
-
-<li {{if eq .MenuActive "crm"}}class="active"{{end}}class="dropdown">
-<a href="#" class="dropdown-toggle" data-hover="dropdown">CRM<b class="caret"></b></a>
-<ul class="dropdown-menu">
-    <li role="presentation" class="dropdown-header">Customer Service</li>
-    <li><a href="http://{{.HostName}}/reports/sales">Abandoned Cart Report</a></li>
-</ul>
-</li>
-
-
-<li {{if eq .MenuActive "sales"}}class="active"{{end}}class="dropdown">
-<a href="#" class="dropdown-toggle" data-hover="dropdown">Sales Reports<b class="caret"></b></a>
-<ul class="dropdown-menu">
-    <li role="presentation" class="dropdown-header">Sales Reports</li>
-    <li><a href="http://{{.HostName}}/reports/sales">Product Sales Reports</a></li>
-    <li><a href="http://{{.HostName}}/reports/sales/monthly">Monthly Reports</a></li>
-    <li><a href="http://{{.HostName}}/reports/sales/missingOrders">Missing Order Reports</a></li>
-</ul>
-</li>
-
-<li {{if eq .MenuActive "user"}}class="active"{{end}}class="dropdown">
-<a href="http://{{.HostName}}/user/admin">User Admin<i class="glyphicon glyphicon-share-alt"></i></a>
-</li>
-
-</ul>
-    </div><!-- /.navbar-collapse -->
-</div>
-    </div><!-- /.container -->
-</nav>
-
-<div class="container">
-    <!-- left, vertical navbar & content -->
-    <div class="row">
-<!-- left, vertical navbar -->
-<!--
-<div class="col-md-2 bootstrap-admin-col-left">
-    <ul class="nav navbar-collapse collapse bootstrap-admin-navbar-side">
-<li>
-    <a href="about.html"><i class="glyphicon glyphicon-chevron-right"></i> About</a>
-</li>
-<li class="active">
-    <a href="dashboard.html"><i class="glyphicon glyphicon-chevron-right"></i> Dashboard</a>
-    </li>
-       <li class="disabled">
-   <a href="#"><i class="glyphicon glyphicon-chevron-right"></i> Calendar</a>
-   </li>
-      <li class="disabled">
-    <a href="#"><i class="glyphicon glyphicon-chevron-right"></i> Statistics (Charts)</a>
-    </li>
-
-  <li class="disabled">
-    <a href="#"><i class="glyphicon glyphicon-chevron-right"></i> Statistics (Charts)</a>
-    </li>
-
-  <li class="disabled">
-    <a href="#"><i class="glyphicon glyphicon-chevron-right"></i> Statistics (Charts)</a>
-    </li>
-
-  <li class="disabled">
-    <a href="#"><i class="glyphicon glyphicon-chevron-right"></i> Statistics (Charts)</a>
-    </li>
-    </ul>
--->
-    </div>
+        <!-- Navigation & Logo-->
+        <div class="mainmenu-wrapper">
+	        <div class="container">
+	        	<div class="menuextras">
+					<div class="extras">
+						<ul>
+							<li class="shopping-cart-items"><i class="glyphicon glyphicon-shopping-cart icon-white"></i> <a href="page-shopping-cart.html"><b>3 items</b></a></li>
+							<li>
+								<div class="dropdown choose-country">
+									<a class="#" data-toggle="dropdown" href="#"><img src="http://{{.HostName}}/assets/img/flags/gb.png" alt="Great Britain"> UK</a>
+									<ul class="dropdown-menu" role="menu">
+										<li role="menuitem"><a href="#"><img src="http://{{.HostName}}/assets/img/flags/us.png" alt="United States"> US</a></li>
+										<li role="menuitem"><a href="#"><img src="http://{{.HostName}}/assets/img/flags/de.png" alt="Germany"> DE</a></li>
+										<li role="menuitem"><a href="#"><img src="http://{{.HostName}}/assets/img/flags/es.png" alt="Spain"> ES</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="http://{{.HostName}}/user/login">Login</a></li>
+							<li><a href="http://{{.HostName}}/user/register">Register</a></li>
+			        	</ul>
+					</div>
+		        </div>
+		        <nav id="mainmenu" class="mainmenu">
+					<ul>
+						<li class="logo-wrapper"><a href="http://{{.HostName}}"><img src="http://{{.HostName}}/assets/img/mPurpose-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
+						<li class="active">
+						<a href="http://{{.HostName}}">Home</a>
+						</li>
+						<li>
+							<a href="features.html">Features</a>
+						</li>
+						<li class="has-submenu">
+							<a href="#">Pages +</a>
+							<div class="mainmenu-submenu">
+								<div class="mainmenu-submenu-inner"> 
+									<div>
+										<h4>Homepage</h4>
+										<ul>
+											<li><a href="index.html">Homepage (Sample 1)</a></li>
+											<li><a href="page-homepage-sample.html">Homepage (Sample 2)</a></li>
+										</ul>
+										<h4>Services & Pricing</h4>
+										<ul>
+											<li><a href="page-services-1-column.html">Services/Features (Rows)</a></li>
+											<li><a href="page-services-3-columns.html">Services/Features (3 Columns)</a></li>
+											<li><a href="page-services-4-columns.html">Services/Features (4 Columns)</a></li>
+											<li><a href="page-pricing.html">Pricing Table</a></li>
+										</ul>
+										<h4>Team & Open Vacancies</h4>
+										<ul>
+											<li><a href="page-team.html">Our Team</a></li>
+											<li><a href="page-vacancies.html">Open Vacancies (List)</a></li>
+											<li><a href="page-job-details.html">Open Vacancies (Job Details)</a></li>
+										</ul>
+									</div>
+									<div>
+										<h4>Our Work (Portfolio)</h4>
+										<ul>
+											<li><a href="page-portfolio-2-columns-1.html">Portfolio (2 Columns, Option 1)</a></li>
+											<li><a href="page-portfolio-2-columns-2.html">Portfolio (2 Columns, Option 2)</a></li>
+											<li><a href="page-portfolio-3-columns-1.html">Portfolio (3 Columns, Option 1)</a></li>
+											<li><a href="page-portfolio-3-columns-2.html">Portfolio (3 Columns, Option 2)</a></li>
+											<li><a href="page-portfolio-item.html">Portfolio Item (Project) Description</a></li>
+										</ul>
+										<h4>General Pages</h4>
+										<ul>
+											<li><a href="page-about-us.html">About Us</a></li>
+											<li><a href="page-contact-us.html">Contact Us</a></li>
+											<li><a href="page-faq.html">Frequently Asked Questions</a></li>
+											<li><a href="page-testimonials-clients.html">Testimonials & Clients</a></li>
+											<li><a href="page-events.html">Events</a></li>
+											<li><a href="page-404.html">404 Page</a></li>
+											<li><a href="page-sitemap.html">Sitemap</a></li>
+											<li><a href="page-login.html">Login</a></li>
+											<li><a href="page-register.html">Register</a></li>
+											<li><a href="page-password-reset.html">Password Reset</a></li>
+											<li><a href="page-terms-privacy.html">Terms & Privacy</a></li>
+											<li><a href="page-coming-soon.html">Coming Soon</a></li>
+										</ul>
+									</div>
+									<div>
+										<h4>eShop</h4>
+										<ul>
+											<li><a href="page-products-3-columns.html">Products listing (3 Columns)</a></li>
+											<li><a href="page-products-4-columns.html">Products listing (4 Columns)</a></li>
+											<li><a href="page-products-slider.html">Products Slider</a></li>
+											<li><a href="page-product-details.html">Product Details</a></li>
+											<li><a href="page-shopping-cart.html">Shopping Cart</a></li>
+										</ul>
+										<h4>Blog</h4>
+										<ul>
+											<li><a href="page-blog-posts.html">Blog Posts (List)</a></li>
+											<li><a href="page-blog-post-right-sidebar.html">Blog Single Post (Right Sidebar)</a></li>
+											<li><a href="page-blog-post-left-sidebar.html">Blog Single Post (Left Sidebar)</a></li>
+											<li><a href="page-news.html">Latest & Featured News</a></li>
+										</ul>
+									</div>
+								</div><!-- /mainmenu-submenu-inner -->
+							</div><!-- /mainmenu-submenu -->
+						</li>
+						<li>
+							<a href="credits.html">Credits</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 {{end}}

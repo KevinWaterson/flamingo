@@ -1,0 +1,157 @@
+{{define "adminFooter"}}
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script type="text/javascript" src="http://{{.HostName}}/assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="http://{{.HostName}}/assets/js/twitter-bootstrap-hover-dropdown.min.js"></script>
+        <script type="text/javascript" src="http://{{.HostName}}/assets/js/bootstrap-admin-theme-change-size.js"></script>
+        <script type="text/javascript" src="http://{{.HostName}}/assets/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
+	<script type="text/javascript" src="http://{{.HostName}}/assets/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="http://{{.HostName}}/assets/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                // Easy pie charts
+                $('.easyPieChart').easyPieChart({animate: 1000});
+            });
+    </script>
+    <script type="text/javascript">
+            jQuery(document).ready(function() {
+
+               $('.datepicker').datepicker({  
+                       inline: true,
+                       yearRange: "-20:+0",
+		       changeYear: true,
+		       changeMonth: true,
+                       dateFormat: 'yy-mm-dd',
+                       showOtherMonths: true,  
+                       dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                       onSelect: function(selected) {
+                               $("#dateEnd").datepicker("option","minDate", selected)
+                       }
+               });
+
+                  $('.datepicker').datepicker({  
+                  inline: true,
+                  yearRange: "-20:+0",
+		  changeYear: true,
+		  changeMonth: true,
+                  dateFormat: 'yy-mm-dd',
+                  showOtherMonths: true,  
+                  dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                  onSelect: function(selected) {
+                          $("#dateStart").datepicker("option","maxDate", selected)
+                  }
+	  });  
+
+
+               $('#dateStart').datepicker({  
+                       inline: true,
+                       yearRange: "-20:+0",
+		       changeYear: true,
+		       changeMonth: true,
+                       dateFormat: 'yy-mm-dd',
+                       showOtherMonths: true,  
+                       dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                       onSelect: function(selected) {
+                               $("#dateEnd").datepicker("option","minDate", selected)
+                       }
+               });
+
+                  $('#dateEnd').datepicker({  
+                  inline: true,
+                  yearRange: "-20:+0",
+		  changeYear: true,
+		  changeMonth: true,
+                  dateFormat: 'yy-mm-dd',
+                  showOtherMonths: true,  
+                  dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                  onSelect: function(selected) {
+                          $("#dateStart").datepicker("option","maxDate", selected)
+                  }
+	  });  
+
+
+               $('#monthlySalesDateStart').datepicker({  
+                       inline: true,
+                       yearRange: "-20:+0",
+		       changeYear: true,
+		       changeMonth: true,
+                       dateFormat: 'yy-mm-dd',
+                       showOtherMonths: true,  
+                       dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                       onSelect: function(selected) {
+                               $("#dateEnd").datepicker("option","minDate", selected)
+                       }
+               });
+
+                  $('#monthlySalesDateEnd').datepicker({  
+                  inline: true,
+                  yearRange: "-20:+0",
+		  changeYear: true,
+		  changeMonth: true,
+                  dateFormat: 'yy-mm-dd',
+                  showOtherMonths: true,  
+                  dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                  onSelect: function(selected) {
+                          $("#dateStart").datepicker("option","maxDate", selected)
+                  }
+	  });  
+
+$( ".mytab" ).tabs({
+  load: function( event, ui ) {}
+});
+$( ".mytab" ).on( "tabsload", function( event, ui ) {} );
+
+    $('#userGroupTable').dataTable();
+    $('#userAdminTable').dataTable();
+    $('#datatable').dataTable();
+
+$('#bbtnYes').click(function() {
+	$("#myModal").modal('hide');
+	var id = $(this).data('id');
+	var href = $(this+id).attr('href');
+	alert(href);
+    // console.log($this).data();
+    // window.location.href = link;
+    return true;
+});
+
+
+$('#mmyModal').on('show', function() {
+    var link = $(this).data('id'),
+        confirmBtn = $(this).find('.confirm');
+	alert(link);
+})
+
+$('#myModal').on('show', function() {
+    var id = $(this).data('id'),
+        removeBtn = $(this).find('.danger');
+})
+
+$('.confirm-delete').on('click', function(e) {
+	e.preventDefault();
+	var id = $(this).data('id');
+	var href = $(this).data('href');
+	$('#myModal').data('id', id).data('href', href).modal('show')
+});
+
+$('#btnYes').click(function() {
+    // handle deletion here
+  	var id = $('#myModal').data('id');
+  	var href = $('#myModal').data('href');
+	link = href+id;
+	window.location.href = link;
+  	// $('[data-id='+id+']').remove();
+  	// $('#myModal').modal('hide');
+});
+
+
+});
+  </script>
+  
+</body>
+</html>
+
+{{end}}

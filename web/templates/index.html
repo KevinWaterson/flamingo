@@ -1,223 +1,273 @@
 {{define "index"}}
 {{template "header" .}}
 
-                <!-- content -->
-                <div class="col-md-10">
+        <!-- Homepage Slider -->
+        <div class="homepage-slider">
+        	<div id="sequence">
+				<ul class="sequence-canvas">
+					<!-- Slide 1 -->
+					<li class="bg4">
+						<!-- Slide Title -->
+						<h2 class="title">Responsive</h2>
+						<!-- Slide Text -->
+						<h3 class="subtitle">It looks great on desktops, laptops, tablets and smartphones</h3>
+						<!-- Slide Image -->
+						<img class="slide-img" src="http://{{.HostName}}/assets/img/homepage-slider/slide1.png" alt="Slide 1" />
+					</li>
+					<!-- End Slide 1 -->
+					<!-- Slide 2 -->
+					<li class="bg3">
+						<!-- Slide Title -->
+						<h2 class="title">Color Schemes</h2>
+						<!-- Slide Text -->
+						<h3 class="subtitle">Comes with 5 color schemes and it's easy to make your own!</h3>
+						<!-- Slide Image -->
+						<img class="slide-img" src="http://{{.HostName}}/assets/img/homepage-slider/slide2.png" alt="Slide 2" />
+					</li>
+					<!-- End Slide 2 -->
+					<!-- Slide 3 -->
+					<li class="bg1">
+						<!-- Slide Title -->
+						<h2 class="title">Feature Rich</h2>
+						<!-- Slide Text -->
+						<h3 class="subtitle">Huge amount of components and over 30 sample pages!</h3>
+						<!-- Slide Image -->
+						<img class="slide-img" src="http://{{.HostName}}/assets/img/homepage-slider/slide3.png" alt="Slide 3" />
+					</li>
+					<!-- End Slide 3 -->
+				</ul>
+				<div class="sequence-pagination-wrapper">
+					<ul class="sequence-pagination">
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+					</ul>
+				</div>
+			</div>
+        </div>
+        <!-- End Homepage Slider -->
 
-                    <div class="row">
-                        <div class="navbar navbar-default bootstrap-admin-navbar-thin">
-                            <ol class="breadcrumb bootstrap-admin-breadcrumb">
-                                <li>
-                                    <a href="#">Dashboard</a>
-                                </li>
-                                <li>
-                                    <a href="#">Settings</a>
-                                </li>
-                                <li class="active">Tools</li>
-                            </ol>
+		<!-- Press Coverage -->
+        <div class="section">
+	    	<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-6">
+						<div class="in-press press-wired">
+							<a href="#">Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="in-press press-mashable">
+							<a href="#">Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="in-press press-techcrunch">
+							<a href="#">Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Press Coverage -->
+
+		<!-- Services -->
+        <div class="section">
+	        <div class="container">
+	        	<div class="row">
+	        		<div class="col-md-4 col-sm-6">
+	        			<div class="service-wrapper">
+		        			<img src="http://{{.HostName}}/assets/img/service-icon/diamond.png" alt="Service 1">
+		        			<h3>Aliquam in adipiscing</h3>
+		        			<p>Praesent rhoncus mauris ac sollicitudin vehicula. Nam fringilla turpis turpis, at posuere turpis aliquet sit amet condimentum</p>
+		        			<a href="#" class="btn">Read more</a>
+		        		</div>
+	        		</div>
+	        		<div class="col-md-4 col-sm-6">
+	        			<div class="service-wrapper">
+		        			<img src="http://{{.HostName}}/assets/img/service-icon/ruler.png" alt="Service 2">
+		        			<h3>Curabitur mollis</h3>
+		        			<p>Suspendisse eget libero mi. Fusce ligula orci, vulputate nec elit ultrices, ornare faucibus orci. Aenean lectus sapien, vehicula</p>
+		        			<a href="#" class="btn">Read more</a>
+		        		</div>
+	        		</div>
+	        		<div class="col-md-4 col-sm-6">
+	        			<div class="service-wrapper">
+		        			<img src="http://{{.HostName}}/assets/img/service-icon/box.png" alt="Service 3">
+		        			<h3>Vivamus mattis</h3>
+		        			<p>Phasellus posuere et nisl ac commodo. Nulla facilisi. Sed tincidunt bibendum cursus. Aenean vulputate aliquam risus rutrum scelerisque</p>
+		        			<a href="#" class="btn">Read more</a>
+		        		</div>
+	        		</div>
+	        	</div>
+	        </div>
+	    </div>
+	    <!-- End Services -->
+
+		<!-- Call to Action Bar -->
+	    <div class="section section-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="calltoaction-wrapper">
+							<h3>It's a free multipurpose Bootstrap 3 template!</h3> <a href="http://www.dragdropsite.com" class="btn btn-orange">Download here!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Call to Action Bar -->
+
+		<!-- Testimonials -->
+	    <div class="section">
+			<div class="container">
+				<h2>Testimonials</h2>
+				<div class="row">
+					<!-- Testimonial -->
+					<div class="testimonial col-md-4 col-sm-6">
+						<!-- Author Photo -->
+						<div class="author-photo">
+							<img src="http://{{.HostName}}/assets/img/user1.jpg" alt="Author 1">
+						</div>
+						<div class="testimonial-bubble">
+							<blockquote>
+								<!-- Quote -->
+								<p class="quote">
+		                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut."
+                        		</p>
+                        		<!-- Author Info -->
+                        		<cite class="author-info">
+                        			- Name Surname,<br>Managing Director at <a href="#">Some Company</a>
+                        		</cite>
+                        	</blockquote>
+                        	<div class="sprite arrow-speech-bubble"></div>
                         </div>
                     </div>
-
-                    <div class="row">
-                        <div class="panel panel-default bootstrap-admin-no-table-panel">
-                            <div class="panel-heading">
-                                <div class="text-muted bootstrap-admin-box-title">Statistics</div>
-                                <div class="pull-right"><span class="badge">View More</span></div>
-                            </div>
-                            <div class="bootstrap-admin-panel-content bootstrap-admin-no-table-panel-content collapse in">
-                                <div class="col-md-3">
-					<div class="easyPieChart" data-percent="{{.SalesIncrease}}" style="width: 110px; height: 110px; line-height: 110px;">{{.SalesIncrease}}%<canvas width="110" height="110"></canvas></div>
-                                    <div class="chart-bottom-heading"><span class="label label-info">Sales Increase</span></div>
-			    </div>
-
-<!--
-                                <div class="col-md-3">
-                                    <div class="easyPieChart" data-percent="53" style="width: 110px; height: 110px; line-height: 110px;">53%<canvas width="110" height="110"></canvas></div>
-                                    <div class="chart-bottom-heading"><span class="label label-info">Page Views</span></div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="easyPieChart" data-percent="83" style="width: 110px; height: 110px; line-height: 110px;">83%<canvas width="110" height="110"></canvas></div>
-                                    <div class="chart-bottom-heading"><span class="label label-info">Users</span></div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="easyPieChart" data-percent="13" style="width: 110px; height: 110px; line-height: 110px;">13%<canvas width="110" height="110"></canvas></div>
-                                    <div class="chart-bottom-heading"><span class="label label-info">Orders</span></div>
-			    </div>
--->
-                            </div>
+                    <!-- End Testimonial -->
+                    <div class="testimonial col-md-4 col-sm-6">
+						<div class="author-photo">
+							<img src="http://{{.HostName}}/assets/img/user5.jpg" alt="Author 2">
+						</div>
+						<div class="testimonial-bubble">
+							<blockquote>
+								<p class="quote">
+		                            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                        		</p>
+                        		<cite class="author-info">
+                        			- Name Surname,<br>Managing Director at <a href="#">Some Company</a>
+                        		</cite>
+                        	</blockquote>
+                        	<div class="sprite arrow-speech-bubble"></div>
                         </div>
                     </div>
-
-
-<!--
-
-                    <div class="row bootstrap-admin-no-edges-padding">
-                        <div class="col-md-6">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <div class="text-muted bootstrap-admin-box-title">Users</div>
-                                    <div class="pull-right"><span class="badge">1,234</span></div>
-                                </div>
-                                <div class="bootstrap-admin-panel-content">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Username</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Vincent</td>
-                                                <td>Gabriel</td>
-                                                <td>@gabrielva</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <div class="text-muted bootstrap-admin-box-title">Orders</div>
-                                    <div class="pull-right"><span class="badge">752</span></div>
-                                </div>
-                                <div class="bootstrap-admin-panel-content">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Product</th>
-                                                <th>Date</th>
-                                                <th>Amount</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Coat</td>
-                                                <td>02/02/2013</td>
-                                                <td>$25.12</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Jacket</td>
-                                                <td>01/02/2013</td>
-                                                <td>$335.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Shoes</td>
-                                                <td>01/02/2013</td>
-                                                <td>$29.99</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+					<div class="testimonial col-md-4 col-sm-6">
+						<div class="author-photo">
+							<img src="http://{{.HostName}}/assets/img/user2.jpg" alt="Author 3">
+						</div>
+						<div class="testimonial-bubble">
+							<blockquote>
+								<p class="quote">
+		                            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                        		</p>
+                        		<cite class="author-info">
+                        			- Name Surname,<br>Managing Director at <a href="#">Some Company</a>
+                        		</cite>
+                        	</blockquote>
+                        	<div class="sprite arrow-speech-bubble"></div>
                         </div>
                     </div>
+				</div>
+			</div>
+	    </div>
+	    <!-- End Testimonials -->
 
-                    <div class="row bootstrap-admin-no-edges-padding">
-                        <div class="col-md-6">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <div class="text-muted bootstrap-admin-box-title">Clients</div>
-                                    <div class="pull-right"><span class="badge">17</span></div>
-                                </div>
-                                <div class="bootstrap-admin-panel-content">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Username</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Vincent</td>
-                                                <td>Gabriel</td>
-                                                <td>@gabrielva</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <div class="text-muted bootstrap-admin-box-title">Invoices</div>
-                                    <div class="pull-right"><span class="badge">812</span></div>
-                                </div>
-                                <div class="bootstrap-admin-panel-content">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Date</th>
-                                                <th>Amount</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>02/02/2013</td>
-                                                <td>$25.12</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>01/02/2013</td>
-                                                <td>$335.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>01/02/2013</td>
-                                                <td>$29.99</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
- -->
+		<!-- Pricing Table -->
+	    <div class="section">
+	    	<div class="container">
+	    		<h2>Pricing</h2>
+	        	<div class="row">
+	        		<!-- Pricing Plans Wrapper -->
+	        		<div class="pricing-wrapper col-md-12">
+        				<!-- Pricing Plan -->
+						<div class="pricing-plan">
+							<!-- Pricing Plan Ribbon -->
+							<div class="ribbon-wrapper">
+								<div class="price-ribbon ribbon-red">Popular</div>
+							</div>
+							<h2 class="pricing-plan-title">Starter</h2>
+							<p class="pricing-plan-price">FREE</p>
+							<!-- Pricing Plan Features -->
+							<ul class="pricing-plan-features">
+								<li><strong>1</strong> user</li>
+								<li><strong>Unlimited</strong> projects</li>
+								<li><strong>2GB</strong> storage</li>
+							</ul>
+							<a href="index.html" class="btn">Order Now</a>
+						</div>
+						<!-- End Pricing Plan -->
+					    <div class="pricing-plan">
+							<h2 class="pricing-plan-title">Advanced</h2>
+							<p class="pricing-plan-price">$49<span>/mo</span></p>
+								<ul class="pricing-plan-features">
+									<li><strong>10</strong> users</li>
+									<li><strong>Unlimited</strong> projects</li>
+									<li><strong>20GB</strong> storage</li>
+								</ul>
+							<a href="index.html" class="btn">Order Now</a>
+					    </div>
+					    <!-- Promoted Pricing Plan -->
+					    <div class="pricing-plan pricing-plan-promote">
+								<h2 class="pricing-plan-title">Premium</h2>
+								<p class="pricing-plan-price">$99<span>/mo</span></p>
+								<ul class="pricing-plan-features">
+									<li><strong>Unlimited</strong> users</li>
+									<li><strong>Unlimited</strong> projects</li>
+									<li><strong>100GB</strong> storage</li>
+								</ul>
+							<a href="index.html" class="btn">Order Now</a>
+					    </div>
+					    <div class="pricing-plan">
+					    	<!-- Pricing Plan Ribbon -->
+							<div class="ribbon-wrapper">
+								<div class="price-ribbon ribbon-green">New</div>
+							</div>
+							<h2 class="pricing-plan-title">Mega</h2>
+							<p class="pricing-plan-price">$199<span>/mo</span></p>
+								<ul class="pricing-plan-features">
+									<li><strong>Unlimited</strong> users</li>
+									<li><strong>Unlimited</strong> projects</li>
+									<li><strong>100GB</strong> storage</li>
+								</ul>
+							<a href="index.html" class="btn">Order Now</a>
+					    </div>
+	        		</div>
+	        		<!-- End Pricing Plans Wrapper -->
+	        	</div>
+	    	</div>
+	    </div>
+	    <!-- End Pricing Table -->
 
-
-                </div>
-            </div>
-    </div>
+		<!-- Our Clients -->
+	    <div class="section">
+	    	<div class="container">
+	    		<h2>Our Clients</h2>
+				<div class="clients-logo-wrapper text-center row">
+					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://{{.HostName}}/assets/img/logos/canon.png" alt="Client Name"></a></div>
+					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://{{.HostName}}/assets/img/logos/cisco.png" alt="Client Name"></a></div>
+					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://{{.HostName}}/assets/img/logos/dell.png" alt="Client Name"></a></div>
+					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://{{.HostName}}/assets/img/logos/ea.png" alt="Client Name"></a></div>
+					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://{{.HostName}}/assets/img/logos/ebay.png" alt="Client Name"></a></div>
+					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://{{.HostName}}/assets/img/logos/facebook.png" alt="Client Name"></a></div>
+					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://{{.HostName}}/assets/img/logos/google.png" alt="Client Name"></a></div>
+					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://{{.HostName}}/assets/img/logos/hp.png" alt="Client Name"></a></div>
+					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://{{.HostName}}/assets/img/logos/microsoft.png" alt="Client Name"></a></div>
+					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://{{.HostName}}/assets/img/logos/mysql.png" alt="Client Name"></a></div>
+					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://{{.HostName}}/assets/img/logos/sony.png" alt="Client Name"></a></div>
+					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://{{.HostName}}/assets/img/logos/yahoo.png" alt="Client Name"></a></div>
+				</div>
+			</div>
+	    </div>
+	    <!-- End Our Clients -->
 
 {{template "footer" .}}
 {{end}}
